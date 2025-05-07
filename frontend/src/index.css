@@ -1,0 +1,9 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: content-box;
+  font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar {
+  display: none;
+}

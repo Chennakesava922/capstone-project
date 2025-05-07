@@ -1,0 +1,157 @@
+.profileContainer {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.profileCard {
+  background: linear-gradient(135deg, rgba(183, 33, 255, 0.05), rgba(33, 212, 253, 0.05));
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.profileTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.3rem;
+  background: linear-gradient(135deg, #b721ff, #21d4fd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detailItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #00c6ff;
+  color: #333;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.detailLabel {
+  font-weight: 600;
+  color: #555;
+}
+
+.detailValue {
+  font-weight: 400;
+  color: #1f2937;
+}
+
+.valueContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.editField {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.inlineInput {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #0072ff;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s;
+  width: 150px;
+}
+
+.inlineInput:focus {
+  border-color: #21d4fd;
+}
+
+.inlineButtons {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.inlineEdit,
+.inlineSave,
+.inlineCancel {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.inlineEdit {
+  background: transparent;
+  color: #0072ff;
+}
+
+.inlineEdit:hover {
+  color: #21d4fd;
+}
+
+.inlineSave {
+  background: #00c853;
+  color: white;
+}
+
+.inlineSave:hover {
+  background: #00e676;
+}
+
+.inlineCancel {
+  background: #ff3d00;
+  color: white;
+}
+
+.inlineCancel:hover {
+  background: #ff6e40;
+}
+
+/* States */
+.loading,
+.error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #b721ff 0%, #21d4fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profileContainer {
+    padding: 1rem;
+  }
+
+  .profileCard {
+    padding: 1rem;
+  }
+}

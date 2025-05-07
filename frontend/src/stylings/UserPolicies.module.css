@@ -1,0 +1,201 @@
+.policiesContainer {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 2rem auto;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  animation: fadeIn 0.6s both;
+}
+
+.policiesTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #000;
+  margin-left: 1rem;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-height: 600px;
+  overflow-y: auto;
+  margin: 0  1rem 5rem;
+  scrollbar-width: none;  /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+}
+
+.tableWrapper::-webkit-scrollbar {
+  display: none;  /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.tableHeader {
+  background-color: #f0f4f8;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.tableHeader th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  color: #2d3748;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: #fff;
+}
+
+.policiesTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  table-layout: fixed;
+  border: none;
+}
+
+.policiesTable td {
+  padding: 1rem;
+  border: none;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+.policiesTable tr {
+  background-color: white;
+}
+
+.policyStatus {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  display: inline-block;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+.statusActive {
+  background-color: #10b981;
+  color: white;
+}
+
+.statusPending {
+  background-color: #cf9126;
+  color: white;
+}
+
+.statusFailed {
+  background-color: #db1111;
+  color: white;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: flex-start;
+  gap:0.5rem;
+}
+
+.policyButton {
+  padding: 0.5rem 0rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  color: white;
+  min-width: 100px;
+  text-align: center;
+}
+
+.policyButton[data-action="pay"] {
+  background-color: #10b981;
+}
+
+.policyButton[data-action="claim"] {
+  background-color: #4a90e2;
+}
+
+.policyButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.policyButton[data-action="pay"]:hover {
+  background-color: #0d9c6e;
+}
+
+.policyButton[data-action="claim"]:hover {
+  background-color: #357abd;
+}
+
+.loadingMessage,
+.errorMessage,
+.noPoliciesMessage {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: #d60f0f;
+}
+
+.errorMessage {
+  color: #ef4444;
+}
+
+/* Responsive Table Scroll */
+@media (max-width: 768px) {
+  .policiesContainer {
+    width: 95%;
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .tableWrapper {
+    margin: 0 0.5rem;
+  }
+
+  .policiesTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .policiesTable th, 
+  .policiesTable td {
+    min-width: 120px;
+  }
+
+  .tableHeader th {
+    font-size: 0.8rem;
+    padding: 0.75rem;
+  }
+
+  .policiesTable td {
+    font-size: 0.85rem;
+    padding: 0.75rem;
+  }
+}
+
+.buttonStack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.greenButton {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.greenButton:hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,204 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  background: linear-gradient(135deg, rgba(23, 23, 26, 0.9) 0%, rgba(33, 33, 38, 0.9) 100%);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: fadeInDown 0.8s both;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navLogo:hover {
+  transform: translateY(-2px);
+}
+
+.navLogo span {
+  color: #21d4fd;
+  font-size: 1.8rem;
+}
+
+.navLogo span:hover{
+  color: #b721ff;
+}
+.logoIcon {
+  color: #b721ff;
+  transition: all 0.5s ease;
+}
+
+.navLogo:hover .logoIcon {
+  transform: rotate(15deg);
+  color: #21d4fd;
+}
+
+.navLinks {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navLinks a {
+  background: linear-gradient(135deg, #b721ff 0%, #21d4fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  font-size: 1.3rem;
+  position: relative;
+  border-radius:25px;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.navLinks a:hover {
+  color: white;
+  background: linear-gradient(135deg, #b721ff 0%, #21d4fd 100%);
+  -webkit-background-clip: initial;
+  background-clip: initial;
+}
+
+.navButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btnPrimary, .btnSecondary {
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.btnPrimary {
+  background: white;
+  border: 1px solid #e9ecef;
+  background: linear-gradient(135deg, #b721ff 0%, #21d4fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.btnPrimary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #b721ff 0%, #21d4fd 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  border-radius: 50px;
+}
+
+.btnPrimary:hover {
+  color: white;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(183, 33, 255, 0.3);
+}
+
+.btnPrimary:hover::before {
+  opacity: 1;
+}
+
+.btnSecondary {
+  background: white;
+  border: 1px solid #e9ecef;
+  background: linear-gradient(135deg, #b721ff 0%, #21d4fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.btnSecondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #21d4fd 0%, #b721ff 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  border-radius: 50px;
+}
+
+.btnSecondary:hover {
+  color: white;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(33, 212, 253, 0.3);
+}
+
+.btnSecondary:hover::before {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+  
+  .navLinks {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  
+  .navLinks {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .navButtons {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

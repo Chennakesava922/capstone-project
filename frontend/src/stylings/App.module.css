@@ -1,0 +1,180 @@
+.appContainer {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Gradient Text Style */
+.gradient-text {
+  background: linear-gradient(135deg, #b721ff 0%, #21d4fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Smooth transition for all interactive elements */
+a, button, input, .card, .modal {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Global Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2a2a2a;
+}
+
+h1 {
+  font-size: 2.5rem;
+  animation: fadeInDown 0.8s both;
+}
+
+h2 {
+  font-size: 2rem;
+  animation: fadeInDown 0.8s both 0.2s;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: #4a4a4a;
+  animation: fadeIn 1s both 0.4s;
+}
+
+/* Links */
+a {
+  background: linear-gradient(135deg, #b721ff 0%, #21d4fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-decoration: none;
+  position: relative;
+  font-weight: 600;
+}
+
+
+/* a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(135deg, #b721ff 0%, #21d4fd 100%);
+  transition: width 0.3s ease;
+} */
+
+a:hover::after {
+  width: 100%;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  background: linear-gradient(135deg, #b721ff 0%, #21d4fd 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(183, 33, 255, 0.2);
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #9b1de0 0%, #1ba9d1 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(33, 212, 253, 0.25);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* Cards */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 30px rgba(183, 33, 255, 0.05);
+  border: 2px solid;
+  border-image: linear-gradient(135deg, #b721ff 0%, #21d4fd 100%);
+  border-image-slice: 1;
+  animation: fadeInUp 0.6s both;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(33, 212, 253, 0.1);
+}
+
+/* Form Elements */
+.input {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #2a2a2a;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #b721ff;
+  box-shadow: 0 0 0 3px rgba(183, 33, 255, 0.1);
+}
+
+.input::placeholder {
+  color: #adb5bd;
+}
+
+/* Animations (Keep original animations) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+}

@@ -1,0 +1,271 @@
+.authWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(183, 33, 255, 0.1) 0%, rgba(33, 212, 253, 0.1) 100%);
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .authImageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .authImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .authCardContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .homeIconContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.5rem;
+  }
+  
+  .homeLink {
+    color: #b721ff;
+    transition: all 0.3s ease;
+  }
+  
+  .homeLink:hover {
+    color: #21d4fd;
+    transform: scale(1.1);
+  }
+  
+  .homeIcon {
+    cursor: pointer;
+  }
+  
+  .authCard {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 320px; /* Reduced from 380px */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 
+      0 10px 25px rgba(0, 0, 0, 0.1),
+      0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    animation: fadeIn 0.6s both;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid black;
+  }
+  
+  .authCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+      0 15px 30px rgba(183, 33, 255, 0.15),
+      0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  }
+  
+  .authCard h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #b721ff 0%, #21d4fd 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .authForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; 
+  }
+  
+  .authInput {
+    padding: 10px 12px; /* More compact */
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, #b721ff 0%, #21d4fd 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  
+  .authInput:focus {
+    outline: none;
+    border-color: #21d4fd;
+    box-shadow: 
+      0 0 0 2px rgba(33, 212, 253, 0.2),
+      0 0 0 4px rgba(33, 212, 253, 0.1);
+  }
+  
+  .authInput::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+  }
+  
+  .errorText {
+    color: #ff6b81;
+    margin-top: -0.8rem;
+    font-size: 1rem;
+    display: block;
+    padding-left: 0.5rem;
+  }
+  
+  .forgotPasswordLink {
+    color: #21d4fd;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-align: right;
+    margin-top: -0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .forgotPasswordLink:hover {
+    color: #b721ff;
+    text-decoration: underline;
+  }
+  
+  .submitButton {
+    padding: 10px;
+    background: linear-gradient(135deg, #b721ff 0%, #21d4fd 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .submitButton::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    transition: all 0.3s;
+  }
+  
+  .submitButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(183, 33, 255, 0.3);
+  }
+  
+  .submitButton:hover::after {
+    left: 100%;
+  }
+  
+  .submitButton:disabled {
+    background: rgba(255, 255, 255, 0.15);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .authPrompt {
+    text-align: center;
+    margin-top: 1.2rem;
+    background: linear-gradient(135deg, #b721ff 0%, #21d4fd 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1rem;
+  }
+  
+  .authLink {
+    color: #21d4fd;
+    margin-left: 0.3rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .authLink:hover{
+    color: #b721ff;
+    text-decoration: underline;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .authWrapper {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    
+    .authImageContainer {
+      display: none;
+    }
+    
+    .authCardContainer {
+      width: 100%;
+    }
+    
+    .authCard {
+      padding: 1.5rem;
+      max-width: 300px;
+    }
+    
+    .authCard h2 {
+      font-size: 1.7rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .authWrapper {
+      padding: 0.5rem;
+    }
+    
+    .authCard {
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+    
+    .authForm {
+      gap: 1rem;
+    }
+    
+    .authInput {
+      padding: 10px 14px;
+    }
+    
+    .submitButton {
+      padding: 10px;
+    }
+  }
+  
